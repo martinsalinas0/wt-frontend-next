@@ -6,7 +6,7 @@ export default function Home() {
       </div>
       <p>
         <em>
-          work together to ...... Lorem ipsum dolor sit amet consectetur
+           ...... Lorem ipsum dolor sit amet consectetur
           adipisicing elit. Eius officiis amet voluptatum aspernatur, laborum
           possimus laudantium nam deleniti. In quis obcaecati ex commodi
           laboriosam inventore! Voluptatum cupiditate explicabo consequatur
