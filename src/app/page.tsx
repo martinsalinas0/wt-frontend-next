@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div>
@@ -17,11 +19,11 @@ export default function Home() {
           type="button"
           className="bg-green-600 text-white px-6 py-3 rounded-3xl hover:cursor-pointer transition hover:bg-green-400"
         >
-          Login
+          <Link href="/auth/login">Login</Link>
         </button>
 
         <button className="bg-blue-500 text-white px-6 py-3 rounded-3xl hover:bg-blue-600 hover:cursor-pointer transition">
-          Sign Up
+          <Link href="/auth/sign-up">Sign Up</Link>
         </button>
       </div>
     </div>
