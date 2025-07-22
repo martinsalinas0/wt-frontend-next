@@ -4,11 +4,15 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 interface Job {
-  _id: string;
   jobName: string;
   cost: number;
+  createdAt?: string;
   postedBy: string;
-  createdAt: string;
+  location: string;
+  completeBy: string;
+  category: string;
+  _id: string;
+  bids: number;
 }
 
 const JobsTestPage = () => {
@@ -33,15 +37,21 @@ const JobsTestPage = () => {
     return <div className="p-4 text-gray-500">Loading jobs...</div>;
   }
 
-  const firstJob = jobs[0];
   return (
-    <div>
-      JobsTestPage
-      <div>{firstJob.jobName}</div>
-      <div>{firstJob.cost}</div>
-      <div>{firstJob.postedBy}</div>
-      <div>{firstJob.createdAt}</div>
-      <div>{firstJob._id}</div>
+    <div className="p-4">
+      <h1 className="text-2xl font-bold mb-4">Jobs Test Page</h1>
+      {jobs.length > 0 ? (
+        <ul className="space-y-2">
+          {jobs.map((job) => (
+            <li key={job._id} className="p-2 bg-gray-100 rounded shadow">
+              {job.jobName} - ${job.cost} - {job.createdAt} - {job._id} -{" "}
+              {job.location} - {job.postedBy}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No jobs found.</p>
+      )}
     </div>
   );
 };
