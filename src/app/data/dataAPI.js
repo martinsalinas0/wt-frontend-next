@@ -26,3 +26,6 @@ export const ContactsAPI = {
     this.contacts = this.contacts.filter((contact) => contact.id !== id);
   },
 };
+
+
+
