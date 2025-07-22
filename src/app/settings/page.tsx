@@ -1,3 +1,4 @@
+import { ModeToggle } from "@/components/ui/themeToggle";
 import React from "react";
 
 const SettingsPage = () => {
@@ -9,6 +10,7 @@ const SettingsPage = () => {
         praesentium non quod recusandae atque fugiat necessitatibus adipisci
         deleniti dignissimos est, consequatur accusamus quia, ullam dolore amet
         nobis quisquam ab sunt!
+        <ModeToggle />
       </div>
     </div>
   );
