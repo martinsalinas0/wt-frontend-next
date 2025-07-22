@@ -16,6 +16,9 @@ const NavBar = () => {
             <p className=" hover:text-orange-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
               <Link href="/settings">Settings</Link>
             </p>
+            <p className=" hover:text-orange-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              <Link href="/jobs-test">jobs test</Link>
+            </p>
           </div>
           <div className=" font-bold px-3 py-2 hover:text-blue-300">
             <Link href="/user">User</Link>{" "}
