@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { IoMdAdd  } from "react-icons/io";
 
 const NavBar = () => {
   return (
@@ -20,8 +21,11 @@ const NavBar = () => {
               <Link href="/jobs-test">jobs test</Link>
             </p>
           </div>
-          <div className="  px-3 py-2 hover:text-blue-300 text-lg">
-            <Link href="/jobs/new">create job posting</Link>{" "}
+          <div className="px-3 py-2 hover:text-blue-300 flex items-center space-x-2">
+            <Link href="/jobs/new" className="flex items-center space-x-1">
+              <span className="text-sm sm:text-base">new job</span>
+              <IoMdAdd className="text-lg sm:text-xl" />
+            </Link>
           </div>
           <div className=" font-bold px-3 py-2 hover:text-blue-300">
             <Link href="/user">User</Link>{" "}
