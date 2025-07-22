@@ -20,6 +20,9 @@ const NavBar = () => {
               <Link href="/jobs-test">jobs test</Link>
             </p>
           </div>
+          <div className="  px-3 py-2 hover:text-blue-300 text-lg">
+            <Link href="/jobs/new">create job posting</Link>{" "}
+          </div>
           <div className=" font-bold px-3 py-2 hover:text-blue-300">
             <Link href="/user">User</Link>{" "}
           </div>
