@@ -21,7 +21,16 @@ const JobsTestPage = () => {
 
   console.log(jobs);
 
-  return <div>JobsTestPage</div>;
+  return (
+    <div>
+      JobsTestPage
+      <div>{jobs[0].jobName}</div>
+      <div>{jobs[0].cost}</div>
+      <div>{jobs[0].postedBy}</div>
+      <div>{jobs[0].createdAt}</div>
+      <div>{jobs[0]._id}</div>
+    </div>
+  );
 };
 
 export default JobsTestPage;
