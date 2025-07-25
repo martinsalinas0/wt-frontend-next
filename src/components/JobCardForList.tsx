@@ -38,7 +38,7 @@ const JobCardForList: React.FC<MyComponentProps> = ({
     }
   };
   return (
-    <div className="border-4 p-4 w-72 bg-stone-200 border-stone-200 shadow-xl rounded-2xl m-4">
+    <div className="border-4 p-4 w-72 grid gap-1 bg-stone-200 border-stone-200 shadow-xl rounded-2xl m-4">
       <h2 className="text-center text-2xl font-bold mb-4">{jobName}</h2>
       <div className="space-y-2 text-sm">
         <p>

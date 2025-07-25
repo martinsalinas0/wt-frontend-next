@@ -15,6 +15,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body>
           <NavBar />
+
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
