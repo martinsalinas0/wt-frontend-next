@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { IoMdAdd  } from "react-icons/io";
+import { IoMdAdd } from "react-icons/io";
 
 const NavBar = () => {
   return (

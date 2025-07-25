@@ -2,21 +2,23 @@
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import JobCard from "@/components/JobCardForList";
 
 interface Job {
   jobName: string;
-  cost: number;
+  cost: string;
   createdAt?: string;
   postedBy: string;
   location: string;
   completeBy: string;
   category: string;
   _id: string;
-  bids: number;
+  bids: string;
 }
 
 const JobsTestPage = () => {
   const [jobs, setJobs] = useState<Job[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getJobs = async () => {
@@ -26,10 +28,16 @@ const JobsTestPage = () => {
         setJobs(response.data?.jobs);
       } catch (error) {
         console.error("Failed to GET from API: ", error);
+      } finally {
+        setLoading(false);
       }
     };
     getJobs();
   }, []);
+
+  const handleDeleteSuccess = (id: string) => {
+    setJobs((jobs) => jobs.filter((job) => job._id !== id));
+  };
 
   console.log(jobs);
 
@@ -44,8 +52,18 @@ const JobsTestPage = () => {
         <ul className="space-y-2">
           {jobs.map((job) => (
             <li key={job._id} className="p-2 bg-gray-100 rounded shadow">
-              {job.jobName} - ${job.cost} - {job.createdAt} - {job._id} -{" "}
-              {job.location} - {job.postedBy}
+              <JobCard
+                jobName={job.jobName}
+                location={job.location}
+                cost={job.cost}
+                bids={job.bids}
+                createdAt={job.createdAt}
+                completeBy="complete by date"
+                category={job.category}
+                postedBy={job.postedBy}
+                jobID={job._id}
+                onDeleteSuccess={handleDeleteSuccess}
+              ></JobCard>
             </li>
           ))}
         </ul>

@@ -1,4 +1,4 @@
-import JobCard from "@/components/JobCard";
+import JobCard from "@/components/JobCardForList";
 import React from "react";
 
 const JobsPage = () => {
