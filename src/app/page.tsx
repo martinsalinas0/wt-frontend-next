@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -13,7 +15,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6">
               Welcome to{" "}
-              <span className="text-blue-600 font-bold">work togtehr</span>
+              <span className="text-blue-600 font-bold">Work Together</span>
             </h2>
 
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
@@ -30,12 +32,16 @@ export default function Home() {
             type="button"
             className="group relative bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-out min-w-[140px]"
           >
-            <span className="relative z-10">Login</span>
+            <span className="relative z-10">
+              <Link href="/auth/login">Login</Link>
+            </span>
             <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </button>
 
           <button className="group relative bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-out min-w-[140px]">
-            <span className="relative z-10">Sign Up</span>
+            <span className="relative z-10">
+              <Link href="/auth/sign-up">Sign Up</Link>
+            </span>
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </button>
         </div>
