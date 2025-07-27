@@ -13,7 +13,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6">
               Welcome to{" "}
-              <span className="text-blue-600 font-bold">'Work Together'</span>
+              <span className="text-blue-600 font-bold">work togtehr</span>
             </h2>
 
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
